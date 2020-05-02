@@ -95,7 +95,35 @@ export class OsascoComponent implements OnInit {
        
           borderWidth: 1
       },
-        
+/*
+      {
+        label: 'Isolamento Social (em %)',
+        data: [50, 87, 36, 57, 30, 18,28,35],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0)',
+            'rgba(0, 0, 255, 1)',
+            'rgba(0, 0, 255, 1)',
+            'rgba(0, 0, 255, 1)',
+            'rgba(0, 0, 255, 1)',
+            'rgba(0, 0, 255, 1)',
+            'rgba(0, 0, 255, 1)',
+            'rgba(0, 0, 255, 1)',
+
+        ],
+        borderColor: [
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)'
+        ],
+     
+        borderWidth: 1
+    },
+        */
         
         ],
 
@@ -115,6 +143,62 @@ export class OsascoComponent implements OnInit {
           }
       }
   });
+
+
+  var myChart = new Chart("isolamentoSocial", {
+    type: 'line',
+    data: {
+        labels: ['24/4', '25/4', '26/4','27/4', '28/4','29/4','30/4','01/05'],
+        datasets: [{
+           
+
+    
+      label: 'Isolamento Social',
+      data: [50, 55, 61, 51, 50, 50, 49, 58,100],
+      backgroundColor: [
+          'rgba(255, 99, 132, 0)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+
+      ],
+      borderColor: [
+        'rgba(0, 0, 255, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(0, 0, 255, 1)'
+      ],
+   
+      borderWidth: 1
+  },
+      
+      
+      ],
+
+        
+    },
+    
+    options: {
+      layout: {
+       
+    },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
   }
 
 }
