@@ -14,12 +14,13 @@ export class OsascoComponent implements OnInit {
     var myChart = new Chart("myChart", {
       type: 'line',
       data: {
-          labels: ['24/4', '25/4', '26/4','27/4', '28/4','29/4','30/4','01/05','2/5'],
+          labels: ['16/3', '25/4', '26/4','27/4', '28/4','29/4','30/4','01/05','2/5','3/5'],
           datasets: [{
               label: 'Confirmados',
-              data: [497, 544, 549, 931, 929, 1023,1067,1093,1123],
+              data: [497, 544, 549, 931, 929, 1023,1067,1093,1123,1352],
               backgroundColor: [
                   'rgba(255, 99, 132, 0)',
+                  'rgba(175, 33, 210, 1)',
                   'rgba(175, 33, 210, 1)',
                   'rgba(175, 33, 210, 1)',
                   'rgba(175, 33, 210, 1)',
@@ -38,15 +39,17 @@ export class OsascoComponent implements OnInit {
                   'rgba(175, 33, 210, 1)',
                   'rgba(175, 33, 210, 1)',
                   'rgba(175, 33, 210, 1)',
+                  'rgba(175, 33, 210, 1)',
                   'rgba(175, 33, 210, 1)'
               ],
               borderWidth: 1
           },
           {
             label: 'Recuperados',
-            data: [376, 387, 436, 457, 530, 618,628,635,648],
+            data: [376, 387, 436, 457, 530, 618,628,635,648,743],
             backgroundColor: [
                 'rgba(255, 99, 132, 0)',
+                'rgba(20, 210, 16, 1)',
                 'rgba(20, 210, 16, 1)',
                 'rgba(20, 210, 16, 1)',
                 'rgba(20, 210, 16, 1)',
@@ -66,6 +69,7 @@ export class OsascoComponent implements OnInit {
                 'rgba(20, 210, 16, 1)',
                 'rgba(20, 210, 16, 1)',
                 'rgba(20, 210, 16, 1)',
+                'rgba(20, 210, 16, 1)',
                 'rgba(20, 210, 16, 1)'
             ],
          
@@ -74,9 +78,10 @@ export class OsascoComponent implements OnInit {
 
         {
           label: 'Óbitos',
-          data: [51, 57, 68, 81, 89,91,104,108,111],
+          data: [51, 57, 68, 81, 89,91,104,108,111,118],
           backgroundColor: [
               'rgba(3, 99, 132, 0)',
+              'rgba(0, 0, 0, 1)',
               'rgba(0, 0, 0, 1)',
               'rgba(0, 0, 0, 1)',
               'rgba(0, 0, 0, 1)',
@@ -88,6 +93,7 @@ export class OsascoComponent implements OnInit {
 
           ],
           borderColor: [
+              'rgba(0, 0, 0, 1)',
               'rgba(0, 0, 0, 1)',
               'rgba(0, 0, 0, 1)',
               'rgba(0, 0, 0, 1)',
@@ -125,15 +131,16 @@ export class OsascoComponent implements OnInit {
   var myChart = new Chart("isolamentoSocial", {
     type: 'line',
     data: {
-        labels: ['24/4', '25/4', '26/4','27/4', '28/4','29/4','30/4','01/05'],
+        labels: ['24/4', '25/4', '26/4','27/4', '28/4','29/4','30/4','01/05','2/5'],
         datasets: [{
            
 
     
       label: 'Isolamento Social',
-      data: [50, 55, 61, 51, 50, 50, 49, 58,100],
+      data: [50, 55, 61, 51, 50, 50, 49, 58,54,100],
       backgroundColor: [
           'rgba(255, 99, 132, 0)',
+          'rgba(0, 0, 255, 1)',
           'rgba(0, 0, 255, 1)',
           'rgba(0, 0, 255, 1)',
           'rgba(0, 0, 255, 1)',
@@ -145,6 +152,7 @@ export class OsascoComponent implements OnInit {
 
       ],
       borderColor: [
+        'rgba(0, 0, 255, 1)',
         'rgba(0, 0, 255, 1)',
         'rgba(0, 0, 255, 1)',
         'rgba(0, 0, 255, 1)',
