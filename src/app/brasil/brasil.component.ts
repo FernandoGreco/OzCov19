@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Chart} from 'node_modules/chart.js';
+import { HttpClient } from '../../../node_modules/@angular/common/http';
 
 @Component({
   selector: 'app-brasil',
@@ -8,7 +9,18 @@ import {Chart} from 'node_modules/chart.js';
 })
 export class BrasilComponent implements OnInit {
 
-  constructor() { }
+    url = 'https://brasil.io/api/dataset/covid19/caso/data/?format=json&page=60';
+    items= [];
+
+  constructor(private http: HttpClient) {
+      this.http.get(this.url).toPromise().then(data =>{
+          console.log(data);
+
+          for(let key in data)
+            if(data.hasOwnProperty(key))
+                this.items.push(data[key]);
+      });
+   }
 
   ngOnInit() {
     var myChart = new Chart("covidBrasil", {
